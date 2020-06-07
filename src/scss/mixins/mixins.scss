@@ -1,0 +1,39 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+
+
+@mixin set-vw {
+	width: 82vw;//83.75vw;	
+	margin-left:  9vw;//8.125vw;
+	margin-right:  9vw;//8.125vw;
+}
+
+@mixin set-mediaquery-size($size) {
+  
+    @if $size == $phone-only {
+    
+        @media (max-width: $phone-only) { @content; }
+    } 
+    @else if $size == $tablet-portrait {
+    
+        @media (max-width: $tablet-portrait) { @content; }
+    } 
+    @else if $size == $tablet-landscape {
+    
+        @media (max-width: $tablet-landscape) { @content; }
+    } 
+    @else if $size == $desktop {
+    
+        @media (max-width: $desktop) { @content; }
+    } 
+    @else if $size == $big-desktop {
+    
+        @media (min-width: $big-desktop) { @content; }
+    }
+}

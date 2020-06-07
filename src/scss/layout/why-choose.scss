@@ -1,0 +1,106 @@
+
+.main-content-why {
+    height:  90vh;
+    padding: 2.96875em 13.4375em 2.96875em 13.4375em;
+    background: url('../assets/PLace BG image.png'), rgba(0,0,0,1);
+    text-align: center;
+
+    @include set-mediaquery-size($tablet-portrait) {
+        padding: 2em;
+        height:  auto;
+    }
+
+    h1 {
+        font-size: 35px;
+        color: #ffc61a;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    h2 {
+        font-size: 44px;
+        color: #ffffff;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    button {
+        color: #000;
+        border: 1px solid #000;
+        &:hover {
+            background-color: #000;
+            color: #fff;
+            border: 1px solid $basic-yellow;
+        }
+    }
+    &-container {
+        
+        padding: 3em 0 3em 0;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1em 5em;
+        grid-template-areas: ". ." ". .";
+
+        @include set-mediaquery-size($tablet-portrait) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "." ".";
+        }
+
+        &-item {
+            display: flex;
+            column-gap:  3%;
+            align-items: flex-start;
+            //justify-content: center;
+            padding: 2em;
+
+            &-box {
+                padding: 0.9375‬em;
+                
+               
+                .desc {
+                    flex-basis: 70%;
+                } 
+                h3 {
+                    font-size: 1.5625em;
+                    font-weight: 900;
+                    text-align: left;
+                    padding-bottom: 0.625em;
+                    text-transform: uppercase;
+                }
+                p {
+                    text-align: left;
+                    font-size: 1.125em;
+                    color: #ffffff;
+                    font-weight: 400;
+                }
+                
+                
+                .rounded {
+                    border-radius: 2.5em‬;
+                    -moz-border-radius: 2.5em;
+                    -webkit-border-radius: 2.5em; 
+                    
+                    //width: 5.0625‬em;
+                    max-height: 5.0625‬em;
+                    
+                    background-color: $basic-yellow; 
+
+                    font-size: 1.875em;
+                    color: #161616;
+                    font-family: "FontAwesome"; 
+                    text-align: center;
+                    
+                    padding: 1em !important;
+                }
+            }
+           
+            
+            .faicon {
+                flex-basis: 30%;
+
+            }
+           
+        }
+    }
+}

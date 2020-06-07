@@ -1,0 +1,125 @@
+.main-content-container {
+    background-color: $basic-yellow;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    padding-left: 13.25em;
+    padding-right: 13.25em;
+    padding-top: 6.25em;
+    padding-bottom: 6.25em;
+    z-index: 0;
+
+    @include set-mediaquery-size($tablet-portrait) {
+        padding: 2em;
+        height:  auto;
+        flex-direction: column;
+    }
+
+    &-about {
+        width: 60vw;
+        padding-top: 2em;
+        @include set-mediaquery-size($tablet-portrait) {
+            width: 100vw;
+        }
+        
+        h1 {
+            font-size: 2.1875‬em;
+            color: #000000;
+            font-weight: 900;
+            padding: 1.25em 0 0 0;
+            
+        }
+        h2 {
+            font-size: 3.125em;
+            color: #101010;
+            font-weight: 900;
+            @include set-mediaquery-size($tablet-portrait) {  
+                font-size: 2.5em;
+            }
+        }
+        p {
+            max-width: 32em;
+            //height: 169px;
+            font-size: 1.125em;
+            color: #101010;
+            font-weight: 400;
+            padding: 2.5em 0 2.5em 0;
+
+            @include set-mediaquery-size($tablet-portrait) { 
+                max-width: 90vw;
+            }
+        }
+        button {
+            border: 1px solid $basic-yellow;
+            &:hover {
+                border: 1px solid #000;
+            }
+        }
+
+        
+    }
+    &-booking {
+        width: 40vw;
+        padding-left: 6em;
+        //padding-right: 6em;
+        padding-top: 1.25em;
+        padding-bottom: 1.25em;
+
+        @include set-mediaquery-size($tablet-portrait) {
+            width: auto;
+            padding-left: 0em;
+        }
+
+       h1 {
+            font-size: 2.125em;
+            color: #fff;
+            //width: 100%;
+            font-weight: 900;
+            background-color: #000;   
+            text-transform: uppercase;
+            padding: 1.25em 0 1.25em 2.1875em;
+       }
+        
+        form {
+            //max-width: 2.6875‬em;
+            //width: 100%;
+            background-color: #fff;
+            box-shadow: 0px 0px 50px 43px rgba(0,0,0,0.07);
+            padding: 0 1em 1em 1em;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: center;
+            //flex-basis: 150px;
+            
+            //display: inline-block;
+            
+            @include set-mediaquery-size($tablet-portrait) {
+                flex-direction: column;
+                padding: 2em;
+                align-items: normal;
+            }
+            
+            div {
+                flex-basis: 38%;
+                padding: 1em; 
+
+                @include set-mediaquery-size($tablet-portrait) {
+                    flex-basis: auto;
+                }
+            }
+            .form-submit {
+                
+                width: 100%;
+                //border: 1px solid black;
+
+                
+                @include set-mediaquery-size($tablet-portrait) {
+                    width: 95%;
+                    
+                }
+            }
+        }
+        
+    }
+}

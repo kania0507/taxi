@@ -1,0 +1,134 @@
+header {
+    background:   url("../assets/Layer 3.png"), rgba(0,0,0,0.9);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
+    
+    
+  .header {
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+        padding-left: 5em;
+        padding-right: 5em;
+        position: relative;
+
+        @include set-mediaquery-size($tablet-portrait) {
+            padding: 2em;
+            flex-direction: column;
+        } 
+        
+        .h-logo {
+            font-size: 2.5em;
+            color: #ffffff;
+            font-family: "Lato";
+            font-weight: 900;
+            text-align: center;
+            &-sub {
+                color: #daa505;
+                text-transform: capitalize;
+            }
+            &-line {
+                font-size: 0.5em; //0.9375em;
+                letter-spacing: 0.1875em;
+                color: #ffffff;
+                font-family: "Lato";
+                font-weight: 900;
+                text-align: center;
+            }
+        }
+        
+        .main-nav-list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center; 
+            //overflow: hidden;
+            
+            @include set-mediaquery-size($tablet-portrait) {
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 2em;
+                //min-height: 35vh;
+                position: absolute;
+                left: auto;
+                right: auto;
+                
+                :not(:first-child)  {
+                    display: none;
+                  }                  
+            }
+
+            .icon {
+                display: none;
+                position: absolute;
+                    top: 0;
+                    left: 25%;
+
+                @include set-mediaquery-size($tablet-portrait) {
+                    display: block;
+                    
+                    border-radius: 1.0625em; 
+                    background-color: rgba(255, 198, 26, 0.9); //$basic-yellow;
+                    
+                }
+            }
+            
+            &-responsive {
+                border-radius: 1.0625em; 
+
+               
+                
+                @include set-mediaquery-size($tablet-portrait) {
+                    background-color: rgba(0,0,0,0.95); //$basic-yellow;
+                    :not(:first-child)  {
+                        display: block;
+                    }                    
+                }
+            }
+
+            li {
+                text-align: center;
+                //flex-basis: 20%; 
+                padding: .5em 1.5em;   
+                          
+                
+                
+                &:hover, .active {                    
+                    color: #010101;
+                    //height: 2.125em;
+                    background-color: $basic-yellow;
+                    border-radius: 1.0625em;
+
+                    a {
+                        color: #010101;                        
+                    }
+                }
+            }
+
+            a {
+                color: #fff;
+                font-size: 1.0625em;
+                
+                font-family: "Lato";
+                font-weight: 900;
+
+                border-radius: 1.0625em; 
+            }
+
+            .active {
+                color: #010101;
+                background-color: $basic-yellow;
+            }
+            
+        }
+
+    }
+  }
+}
+

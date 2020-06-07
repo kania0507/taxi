@@ -1,0 +1,119 @@
+.main-content-tariffs {
+    background-color: #fff;
+    min-height: 90vh;
+    text-align: center;
+    padding: 2em 0 2em 0;
+
+    h1 {
+        font-size: 2.1875em;
+        font-weight: 900;        
+        text-transform: uppercase;
+
+    }
+    h2 {
+        font-size: 44px;
+        color: #000000;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    &-container {
+        padding: 1.4em 13.4375em 1.4em 13.4375em;
+        display: flex;
+        flex-direction: row; 
+
+        @include set-mediaquery-size($tablet-portrait) {
+            padding: 2em;
+            height:  auto;
+            flex-direction: column;
+        }
+
+        &-item {
+            flex-basis: 30%;
+            padding: 0 1.25em 1.25em 1.25em;
+            
+
+            &-sub {
+                background-color: #f5f4f2;
+                margin-top: -6.25em;
+                padding-top: 6.25em;
+                padding-bottom: 1.25em;
+
+                h3 {
+                    font-size: 1.875em;
+                    color: #000000;
+                    font-weight: 900;
+                    padding: 1em 0 1em 0;
+                }
+                p {
+                    font-size: 1.125em;
+                    color: #101010; 
+                    font-weight: 400; 
+                    padding-bottom: 1em;
+
+                    @include set-mediaquery-size($tablet-portrait) {
+                        padding-left: 1em;
+                        padding-right: 1em;
+                    }
+                   
+                }
+                .big-price {
+                    font-size: 2.75em;
+                    color: #ffc61a;
+                    font-weight: 900;
+                }
+                button {
+                    color: #000;
+                    //
+                }
+
+                &:hover {
+                    background-color: $basic-yellow;
+                    transition: all 0.6s;
+                    .big-price { 
+                        color: #000;
+                    }
+                    button {
+                        background-color: #000;
+                        color: #fff;
+                    }
+                }
+               
+            }
+            &-active {
+                background-color: $basic-yellow;
+                margin-top: -6.25em;
+                padding-top: 6.25em;
+                padding-bottom: 1.25em;
+
+                h3 {
+                    font-size: 1.875em;
+                    color: #000000;
+                    font-weight: 900;
+                    padding: 1em 0 1em 0;
+                }
+                p {
+                    font-size: 1.125em;
+                    color: #101010; 
+                    font-weight: 400; 
+                    padding-bottom: 1em;
+
+                    @include set-mediaquery-size($tablet-portrait) {
+                        padding-left: 1em;
+                        padding-right: 1em;
+                    }
+                   
+                }
+                .big-price {
+                    font-size: 2.75em;
+                    
+                    font-weight: 900;
+                }
+                button {
+                    border: 1px solid #000;
+                    
+                }
+            }
+            
+        }
+    }
+}

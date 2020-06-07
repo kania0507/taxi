@@ -1,0 +1,55 @@
+footer {
+    padding: 0 13.125em 0 13.125em; 
+    background-color:   rgba(13, 12, 12, 1);
+    color: #fff;
+    min-height: 30vh;
+
+    @include set-mediaquery-size($tablet-portrait) {
+        padding: 2em;
+        height:  auto;
+    }
+
+    .main-footer-container {
+        padding: 5em 0 5em 0;
+        display: flex; 
+        flex-direction: row;
+
+        
+        @include set-mediaquery-size($tablet-portrait) {
+            flex-direction: column;
+            padding: 2em;
+        }
+        
+        &-item {
+            flex-basis: 33%;
+            padding-right: 2em; 
+
+            h1 {
+                font-size: 1.5625em;
+                font-weight: 900;
+                border-bottom: 5px solid $basic-yellow;
+                padding-bottom: 1em;
+            }
+            p, ul {
+                padding-top: 1em;
+                padding-bottom: 1em;
+                font-size: 1.125em;
+                font-weight: 400;
+                li {
+                    padding: 0.5em;
+                }
+                i {
+                    padding-right: 0.5em;
+
+                    &:hover {
+                        color: $basic-yellow;
+                    }
+                }
+            }
+        }
+    }
+    .main-footer-bottom {
+        text-align: center;
+        padding: 0.8em;
+    }
+}

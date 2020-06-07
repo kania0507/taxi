@@ -1,0 +1,46 @@
+.main-header {
+    font-family: "Lato";
+    
+    height: 77vh;
+    font-weight: 900;
+    text-align: center;
+    
+    padding-top: 6em;
+    padding-bottom: 2em;
+    z-index: -1;
+    @include set-mediaquery-size($tablet-portrait) {
+        height: 60vh;
+    }
+    h1 {
+        font-size: 2.25em;
+        color: #ffc61a;
+        
+    }
+    h2 {
+        font-size: 4.5em;
+        color: #ffffff;
+        
+        @include set-mediaquery-size($tablet-portrait) { 
+            font-size: 3.5em;
+        }   
+    }
+    h3 {
+        font-size: 1.25em;
+        letter-spacing: 0.875em;
+        color: #ffffff;
+
+        @include set-mediaquery-size($tablet-portrait) {
+            letter-spacing: normal;
+        }
+        
+    }
+    .layer3 {
+        padding-top: 3.75em;
+        @include set-mediaquery-size($tablet-portrait) { 
+            max-width: 90%;
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+        
+    }
+}

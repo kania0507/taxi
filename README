@@ -1,0 +1,21 @@
+# Taxi
+Taxi is HTML/SCSS file (converted from PSD).
+ 
+From free PSD - source:  https://psdfreebies.com/psd/taxi-cab-service-company-website-template-psd/
+
+
+## Installation
+
+```bash
+npm install
+```
+
+## Usage
+
+```bash
+npm run dev
+```
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
